@@ -1,7 +1,8 @@
-language: python
+language: minimal
 sudo: false
 script:
   provider: script
   script: curl -fsSL -X POST -o /dev/null -u $AWX_USER:$AWX_PASS $AWX_TEMPLATE_URL
   on:
     branch: master
+install: true
