@@ -1,6 +1,6 @@
 language: generic
 sudo: false
-script:
+deploy:
   provider: script
   script: curl -fsSL -X POST -o /dev/null -u $AWX_USER:$AWX_PASS $AWX_TEMPLATE_URL
   on:
