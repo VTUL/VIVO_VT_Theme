@@ -1,8 +1,8 @@
 language: generic
 sudo: false
 script:
- - provider: script
-   script: curl -fsSL -X POST -o /dev/null -u $AWX_USER:$AWX_PASS $AWX_TEMPLATE_URL
-   on:
-     branch: master
- install: true
+  provider: script
+  script: curl -fsSL -X POST -o /dev/null -u $AWX_USER:$AWX_PASS $AWX_TEMPLATE_URL
+  on:
+    branch: master
+install: true
