@@ -38,11 +38,11 @@ $ sudo /etc/init.d/tomcat7 start
 ```
 1. sudo -s
 2. cd /usr/local/vivo/vdata/uploads/
-2. mkdir rdf
-3. chown -R vagrant:tomcat7 rdf/*
-4. cd /var/lib/tomcat7/conf
-5. replace server.xml with [server.xml](tomcat/config/server.xml)
-6. /etc/init.d/tomcat7 restart
+3. mkdir rdf
+4. chown -R vagrant:tomcat7 rdf/
+5. cd /var/lib/tomcat7/conf
+6. replace server.xml with [server.xml](tomcat/config/server.xml)
+7. /etc/init.d/tomcat7 restart
 ```
 
 You will see something like this below:
