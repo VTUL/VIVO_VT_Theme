@@ -20,8 +20,12 @@ $ cd ..
 $ tar -zxvf VIVO_VT_Theme.tar.gz
 $ mv VIVO_VT_Theme/themes/* themes/.
 $ chown -R vagrant:tomcat7 themes/* 
-$ cp VIVO_VT_Theme/templates/freemarker/lib/lib-home-page.ftl templates/freemarker/lib/.
+$ cp VIVO_VT_Theme/templates/freemarker/body/partials/individual/* templates/freemarker/body/partials/individual/.
+$ chown -R vagrant:tomcat7 templates/freemarker/body/partials/individual/*
+$ cp VIVO_VT_Theme/templates/freemarker/lib/* templates/freemarker/lib/.
 $ chown -R vagrant:tomcat7 templates/freemarker/lib/*
+$ cp VIVO_VT_Theme/css/individual/* css/individual/.
+$ chown -R vagrant:tomcat7 css/individual/*
 $ cp VIVO_VT_Theme/rdf/display/everytime/*.n3 /usr/local/vivo/vdata/rdf/display/everytime/.
 $ chown -R vagrant:tomcat7 /usr/local/vivo/vdata/rdf/display/everytime/*.n3
 $ sudo /etc/init.d/tomcat7 start
