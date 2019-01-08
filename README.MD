@@ -28,6 +28,8 @@ $ cp VIVO_VT_Theme/css/individual/* css/individual/.
 $ chown -R vagrant:tomcat7 css/individual/*
 $ cp VIVO_VT_Theme/rdf/display/everytime/*.n3 /usr/local/vivo/vdata/rdf/display/everytime/.
 $ chown -R vagrant:tomcat7 /usr/local/vivo/vdata/rdf/display/everytime/*.n3
+$ cp VIVO_VT_Theme/config/listViewConfig-authorInAuthorship.xml config/.
+$ chown -R vagrant:tomcat7 config/listViewConfig-authorInAuthorship.xml
 $ sudo /etc/init.d/tomcat7 start
 ```
 * Step4: Apply VTech theme
