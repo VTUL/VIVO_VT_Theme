@@ -34,45 +34,18 @@
                     <h3 id="${property.localName}" title="${property.publicDescription!}">${property.name}  <@p.verboseDisplay property /> </h3>
                 <#elseif rangeClass == "Title" && property.statements?has_content && editable >
                     <h3 id="${property.localName}" title="${property.publicDescription!}">${property.name}  <@p.verboseDisplay property /> </h3>
-        <#elseif rangeClass == "Authorship" && !individual.editable && (property.domainUri)?? && property.domainUri?contains("Person")>
-          <h3 id="${property.localName}-${rangeClass}" title="${property.publicDescription!}">${property.name} <@p.addLink property editable /> <@p.verboseDisplay property /> </h3>
-        <#elseif rangeClass == "ResearcherRole" && !individual.editable>
-          <h3 id="${property.localName}-${rangeClass}" title="${property.publicDescription!}">${property.name} <@p.addLink property editable /> <@p.verboseDisplay property /> </h3>
-
-                 <#elseif rangeClass == "Authorship" && !individual.editable && (property.domainUri)?? && !property.domainUri?contains("Person")>
-                   <h3 id="vt-authors" title="${property.publicDescription!}">vt authors</h3>
-                   <#-- List the statements for each property -->
-                                        <#assign limit = property.getDisplayLimit()!5 />
-                                        <#if limit == -1 || limit == 0 >
-                                                <#assign limit = 5 />
-                                        </#if>
-                <ul class="property-list" role="list" id="${property.localName}-${rangeClass}-List" displayLimit="${limit}">
-                  <@p.customAuthors property editable />
-                </ul>
-            </article> <!-- end property --> 
-
-
-            <article class="property" role="article">
-                   <h3 id="${property.localName}" title="${property.publicDescription!}">all authors<@p.addLink property editable /> <@p.verboseDisplay property /> </h3>
-                   <#-- List the statements for each property -->
-                                        <#assign limit = property.getDisplayLimit()!5 />
-                                        <#if limit == -1 || limit == 0 >
-                                                <#assign limit = 5 />
-                                        </#if>
-                <ul class="property-list" role="list" id="${property.localName}-${rangeClass}-List" displayLimit="${limit}">
-                  <@p.customAuthors property editable property.template false true />
-                </ul>
-            </article> <!-- end property -->
-
-        <#else>
+				<#elseif rangeClass == "Authorship" && !individual.editable && (property.domainUri)?? && property.domainUri?contains("Person")>
+					<h3 id="${property.localName}-${rangeClass}" title="${property.publicDescription!}">${property.name} <@p.addLink property editable /> <@p.verboseDisplay property /> </h3>
+				<#elseif rangeClass == "ResearcherRole" && !individual.editable>
+					<h3 id="${property.localName}-${rangeClass}" title="${property.publicDescription!}">${property.name} <@p.addLink property editable /> <@p.verboseDisplay property /> </h3>
+				<#else>
                     <h3 id="${property.localName}" title="${property.publicDescription!}">${property.name} <@p.addLink property editable /> <@p.verboseDisplay property /> </h3>
                 </#if>
-                <#if rangeClass != "Authorship">
                 <#-- List the statements for each property -->
-          <#assign limit = property.getDisplayLimit()!5 />
-          <#if limit == -1 || limit == 0 >
-            <#assign limit = 5 />
-          </#if>
+					<#assign limit = property.getDisplayLimit()!5 />
+					<#if limit == -1 || limit == 0 >
+						<#assign limit = 5 />
+					</#if>
                 <ul class="property-list" role="list" id="${property.localName}-${rangeClass}-List" displayLimit="${limit}">
                     <#-- data property -->
                     <#if property.type == "data">
@@ -83,5 +56,4 @@
                     </#if>
                 </ul>
             </article> <!-- end property -->
-            </#if>
         </#list>
