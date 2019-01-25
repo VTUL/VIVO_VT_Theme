@@ -35,10 +35,10 @@
                 <#elseif rangeClass == "Title" && property.statements?has_content && editable >
                     <h3 id="${property.localName}" title="${property.publicDescription!}">${property.name}  <@p.verboseDisplay property /> </h3>
 				<#elseif rangeClass == "Authorship" && !individual.editable && (property.domainUri)?? && property.domainUri?contains("Person")>
-					<h3 id="${property.localName}-${rangeClass}" title="${property.publicDescription!}">${property.name} <@p.addLink property editable /> <@p.verboseDisplay property /> </h3>
+                                	<h3 id="${property.localName}-${rangeClass}" title="${property.publicDescription!}">${property.name} <@p.addLink property editable /> <@p.verboseDisplay property /> </h3>
 				<#elseif rangeClass == "ResearcherRole" && !individual.editable>
 					<h3 id="${property.localName}-${rangeClass}" title="${property.publicDescription!}">${property.name} <@p.addLink property editable /> <@p.verboseDisplay property /> </h3>
-				<#else>
+                                <#else>
                     <h3 id="${property.localName}" title="${property.publicDescription!}">${property.name} <@p.addLink property editable /> <@p.verboseDisplay property /> </h3>
                 </#if>
                 <#-- List the statements for each property -->
@@ -46,6 +46,18 @@
 					<#if limit == -1 || limit == 0 >
 						<#assign limit = 5 />
 					</#if>
+                <#if rangeClass == "Authorship" && (!(property.domainUri)?? || !property.domainUri?contains("Person"))>
+                        <h4 class="vt-authors" title="${property.publicDescription!}">VT Authors</h4>
+                        <ul class="property-list" role="list" id="${property.localName}-${rangeClass}-List" displayLimit="${limit}">
+                          <@p.customAuthors property editable />
+                        </ul>
+
+                        <h4 class="vt-authors" title="${property.publicDescription!}">All Authors</h4>
+                        <ul class="property-list" role="list" id="${property.localName}-${rangeClass}-List" displayLimit="${limit}">
+                          <@p.customAuthors property editable property.template false true />
+                        </ul>
+                <#else>
+
                 <ul class="property-list" role="list" id="${property.localName}-${rangeClass}-List" displayLimit="${limit}">
                     <#-- data property -->
                     <#if property.type == "data">
@@ -55,5 +67,6 @@
                         <@p.objectProperty property editable /> 
                     </#if>
                 </ul>
+                </#if>
             </article> <!-- end property -->
         </#list>

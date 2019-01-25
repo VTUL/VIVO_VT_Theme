@@ -74,7 +74,9 @@
 
 
 <#macro customAuthors property editable template=property.template onlyVT=true inline=false >
-    <@customAuthorList property editable property.statements template onlyVT inline />
+    <#if (property.statements)?? >
+      <@customAuthorList property editable property.statements template onlyVT inline />
+    </#if>
 </#macro>
 
 
