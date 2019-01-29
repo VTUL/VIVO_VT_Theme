@@ -1946,6 +1946,7 @@ span.subclassExpandMinus {
     padding: 2px 8px;
     border-radius: 6px;
     font-size: 0.8em;
+    white-space: nowrap;
 }
 
 h4.vt-authors {
