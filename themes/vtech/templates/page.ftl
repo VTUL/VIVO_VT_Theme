@@ -9,6 +9,7 @@
     </head>
     
     <body class="${bodyClasses!}" onload="${bodyOnload!}">
+        <div id="mask"></div>
         <#include "identity.ftl">
         <#include "search.ftl" >
         <#include "menu.ftl">

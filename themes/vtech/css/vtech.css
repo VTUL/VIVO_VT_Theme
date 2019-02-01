@@ -3,6 +3,9 @@
 @charset "UTF-8";
 /* CSS Document */
 
+@import "fonts.css";
+@import "colors.css";
+
 /* Tell the browser to render HTML 5 elements as block */
 header,
 hgroup,
@@ -27,7 +30,15 @@ body {
     margin: 0 auto;
 }
 body {
-   background: #f3f3f0 url(../images/header-background.png) center 0 no-repeat;
+   background: white url('../images/grid_3.png') repeat;
+}
+#mask {
+   position: absolute;
+   width: 100%;
+   height: calc(100% - 211px);
+   top: 211px;
+   background-color: rgba(0,0,0,.1);
+   z-index: -1;
 }
 a:hover {
     text-decoration: none;
@@ -43,7 +54,7 @@ h2 {
     padding: 10px 0 12px 0;
     margin: 0;
     font-size: 1.375em;
-    color: #064d68;
+    color: var(--hokie-maroon);
     line-height: 1.5em;
 }
 h2 a {
@@ -127,7 +138,7 @@ input.form-button:visited {
     position: relative;
     border: 0;
     margin: 0;
-    background-color: #ff6600;
+    background-color: var(--hokie-orange);
     font-size: 14px;
     font-weight: normal;
     line-height: 1;
@@ -467,24 +478,46 @@ tr.editformcell td select {
     width: 970px;
     height: 114px;
     margin: 0 auto;
+    background-color: white;
 }
 /* BRANDING ------>  */
 ul.dropdown ul.sub_menu li{
     background: url("../images/arrow-menu-account.gif") no-repeat scroll 7px 8px #fff;
 }
-
-h1.vivo-logo {
+h1.vivo-logo-wrapper {
     position: absolute;
-    width: 500px;
-    height: 59px;
+    width: 400px;
+    height: 50px;
     top: 28px;
     left: 0;
-    background: url(../images/header-logo.png) 0 0 no-repeat;
 }
-h1.vivo-logo a {
-    display: block;
-    width: 500px;
-    height: 59px;
+h1 .vivo-logo {
+    display: inline-block;
+    width: 275px;
+    height: 100%;
+    background: url(../images/header-logo.svg) 0 0 no-repeat;
+    border-right: 1px solid rgba(232,119,34,1);
+}
+h1 .home-name {
+    display: inline-block;
+    height: 100%;
+    vertical-align: top;
+    font-family: Acherus,sans-serif;
+    font-size: 20px; 
+}
+h1 .home-name a {
+   color: var(--hokie-maroon);
+   text-decoration: none;
+   height: calc(100% - 24px);
+   margin: 12px 15px;
+}
+h1 .vivo-logo a, h1 .home-name a {
+    display: inline-block;
+    width: 100%;
+}
+h1 .vivo-logo a, h1 .vivo-logo a:visited, h1 .vivo-logo a:active, h1 .vivo-logo a:link {
+    height: 100%;
+    color: transparent;
 }
 /* HEADER NAV------>  */
 ul#header-nav {
@@ -512,7 +545,7 @@ ul#header-nav li:last-child {
     border-right: none;
 }
 ul#header-nav a {
-    color: #fff;
+    color: var(--hokie-maroon);
 }
 ul#header-nav a:link,
 ul#header-nav a:visited {
@@ -565,14 +598,11 @@ input.search-vivo {
 }
 /* MAIN NAVIGATION------>  */
 ul#main-nav {
-    -webkit-box-shadow: inset 0 5px 5px -5px rgba(0,0,0,0.8);
-    -moz-box-shadow: inset 0 5px 5px -5px rgba(0,0,0,0.8);
-    box-shadow: inset 0 5px 5px -5px rgba(0,0,0,0.8);
     display: block;
     width: 970px;
     height: 46px;
     border: none;
-    background-color: #f7f9f9;
+    border-bottom: 1px solid black;
     margin: 0 auto;
     list-style: none;
     font-size: 1em;
@@ -602,7 +632,7 @@ ul#main-nav {
 #wrapper-content {
     clear: both;
     width: 950px;
-    margin: 0 auto;
+    margin: 50px auto 0 auto;
     background: #fff;
     min-height: 710px;
     padding: 20px;
@@ -619,7 +649,6 @@ body.loggedIn #intro {
 #intro h2 {
     padding: 35px 0 12px 24px;
     border-bottom: none;
-    color: #2485AE;
 }
 #intro p {
     font-size: 16px;
@@ -650,7 +679,6 @@ body.login #login {
  *            padding-top: 18px;
  *            */    padding: 35px 0 10px 10px;
     border-bottom: none;
-    color: #2485AE;
 }
 #login p {
     font-size: 16px;
@@ -810,7 +838,7 @@ p.external-auth a.blue:hover {
     padding: 0;
     font-size: 22px;
     margin-bottom: 15px;
-    color: #2485AE;
+    color: var(--hokie-maroon);
 		padding-left: 24px;
 }
 #search-home-field {
@@ -1095,7 +1123,7 @@ footer {
     font-size: .7em;
     color: #4e5051;
     background-color: #333;
-    border-top: solid 5px #ff6600;
+    border-top: solid 5px var(--hokie-orange);
 }
 footer .content {
     margin: 0 auto;
@@ -1190,6 +1218,16 @@ p{
     font-weight: normal;
     line-height: 1; 
 }
+
+.orange.button,
+.orange.button:visited {
+    background-color: var(--hokie-orange);
+    color: #fff;
+}
+.orange.button:hover {
+    background-color: var(--hokie-orange);
+}
+
 .green.button,
 .green.button:visited {
     background-color: #ff6600;
@@ -1242,7 +1280,6 @@ p{
 }
 #menupage-intro h2 {
     font-size: 1.375em;
-    color: #064d68;
     font-weight: normal;
 }
 #menupage-intro.people h2 {
