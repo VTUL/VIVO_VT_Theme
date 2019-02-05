@@ -120,6 +120,19 @@
              $('input.search-homepage').attr("value","${i18n().limit_search} \u2192");
         }  
     </script>
+
+    <script type="text/javascript" src="js/one.min.js"></script>
+
+    <script type="text/javascript">
+
+      $.ajax({
+        url: "uaMenu.json"
+      }).done(function(data){
+      $("#uaRender").html($.templates("#uaMenu").render(data));
+      })
+
+
+    </script>
     </body>
 </html>
 
