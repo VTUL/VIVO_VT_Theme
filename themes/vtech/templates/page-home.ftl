@@ -121,7 +121,7 @@
         }  
     </script>
 
-    <script type="text/javascript" src="js/one.min.js"></script>
+    <script type="text/javascript" src="${urls.theme}/js/one.min.js"></script>
 
     <script type="text/javascript">
 
