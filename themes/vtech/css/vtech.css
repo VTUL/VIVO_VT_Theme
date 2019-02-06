@@ -532,7 +532,9 @@ ul#header-nav li {
     padding-left: 10px;
     padding-right: 10px;
     border-right: 1px solid #7c7d7f;
-    font-size: 1em;
+    font-family: Acherus,sans-serif;
+    font-size: .8em;
+    font-weight: 400;
     color: #fff;
 }
 ul#header-nav li.last {
