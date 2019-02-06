@@ -523,7 +523,7 @@ h1 .vivo-logo a, h1 .vivo-logo a:visited, h1 .vivo-logo a:active, h1 .vivo-logo 
 ul#header-nav {
     list-style: none;
     height: 30px;
-    padding-top: 3px;
+    padding-top: 10px;
     margin-right: 13px;
 }
 ul#header-nav li {
