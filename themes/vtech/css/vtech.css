@@ -523,7 +523,7 @@ h1 .vivo-logo a, h1 .vivo-logo a:visited, h1 .vivo-logo a:active, h1 .vivo-logo 
 ul#header-nav {
     list-style: none;
     height: 30px;
-    padding-top: 10px;
+    padding-top: 3px;
     margin-right: 13px;
 }
 ul#header-nav li {
@@ -534,7 +534,9 @@ ul#header-nav li {
     border-right: 1px solid #7c7d7f;
     font-family: Acherus,sans-serif;
     font-size: .8em;
-    font-weight: 400;
+    font-weight: 300;
+    line-height: 1;
+    text-transform: uppercase;
     color: #fff;
 }
 ul#header-nav li.last {
