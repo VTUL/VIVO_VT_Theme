@@ -654,6 +654,7 @@ body.loggedIn #intro {
 #intro h2 {
     padding: 35px 0 12px 24px;
     border-bottom: none;
+    color: var(--hokie-maroon);
 }
 #intro p {
     font-size: 16px;
