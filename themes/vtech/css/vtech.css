@@ -521,7 +521,6 @@ h1 .vivo-logo a, h1 .vivo-logo a:visited, h1 .vivo-logo a:active, h1 .vivo-logo 
 }
 /* HEADER NAV------>  */
 ul#header-nav {
-    float: right;
     list-style: none;
     height: 30px;
     padding-top: 10px;
@@ -533,19 +532,18 @@ ul#header-nav li {
     padding-left: 10px;
     padding-right: 10px;
     border-right: 1px solid #7c7d7f;
-    font-size: .7em;
+    font-size: 1em;
     color: #fff;
 }
 ul#header-nav li.last {
     border-right: none;
 }
 ul#header-nav li:last-child {
-    padding-left: 1px;
     padding-right: 0;
     border-right: none;
 }
 ul#header-nav a {
-    color: var(--hokie-maroon);
+    color: white;
 }
 ul#header-nav a:link,
 ul#header-nav a:visited {
