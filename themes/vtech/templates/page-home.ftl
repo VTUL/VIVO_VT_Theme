@@ -121,6 +121,51 @@
         }  
     </script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsrender/0.9.90/jsrender.min.js"></script>
+
+    <!-- ///////////////////////////////////////////// -->
+    <!-- UNIVERSAL ACCESS TEMPLATES -->
+    <!-- ///////////////////////////////////////////// -->
+    <script id="uaImg" type="text/x-jsrender">
+      <img {{props attrs}}{{:key}}="{{:prop}}"{{/props}} />
+    </script>
+    <script id="uaText" type="text/x-jsrender">
+      <span {{props attrs}}{{:key}}="{{:prop}}"{{/props}}>{{:text}}</span>
+    </script>
+    <script id="uaButton" type="x-jsrender">
+      <button {{props attrs}}{{:key}}="{{:prop}}"{{/props}}>
+          {{for items}}
+              {{if content.el === "img"}}
+                  {{include content tmpl="#uaImg"/}}
+              {{else}}
+                  {{include content tmpl="#uaText"/}}
+              {{/if}}
+          {{/for}}
+      </button>
+    </script>
+    <script id="uaLink" type="x-jsrender">
+      <a {{props attrs}}{{:key}}="{{:prop}}"{{/props}}>
+          {{for items}}
+              {{if content.el === "img"}}
+                  {{include content tmpl="#uaImg"/}}
+              {{else}}
+                  {{include content tmpl="#uaText"/}}
+              {{/if}}
+          {{/for}}
+      </a>
+    </script>
+    <script id="uaMenu" type="x-jsrender">
+      {{for items}}
+      <li {{props attrs}}{{:key}}="{{:prop}}"{{/props}}>
+          {{if content.el === "a"}}
+              {{include content tmpl="#uaLink" /}}
+          {{else}}
+              {{include content tmpl="#uaButton" /}}
+          {{/if}}
+      </li>
+      {{/for}}
+    </script>
+
     <script type="text/javascript" src="${urls.theme}/js/one.min.js"></script>
 
     <script type="text/javascript">
