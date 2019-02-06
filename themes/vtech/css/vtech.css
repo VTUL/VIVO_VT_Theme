@@ -597,6 +597,9 @@ input.search-vivo {
     display: none;
 }
 /* MAIN NAVIGATION------>  */
+nav#main-nav-wrapper {
+  background-color: white;
+}
 ul#main-nav {
     display: block;
     width: 970px;
@@ -631,7 +634,7 @@ ul#main-nav {
 /* WRAPPER CONTENT------>  */
 #wrapper-content {
     clear: both;
-    width: 950px;
+    width: 980px;
     margin: 50px auto 0 auto;
     background: #fff;
     min-height: 710px;
