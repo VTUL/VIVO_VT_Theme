@@ -126,7 +126,7 @@
     <script type="text/javascript">
 
       $.ajax({
-        url: "uaMenu.json"
+        url: "${urls.theme}/js/uaMenu.json"
       }).done(function(data){
       $("#uaRender").html($.templates("#uaMenu").render(data));
       })
