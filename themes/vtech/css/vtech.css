@@ -973,8 +973,8 @@ a.view-all-style {
 }
 #home-stats h4 {
 		border-top: 1px solid rgba(220,228,227,.42); /* stroke */
-		border-bottom: 2px solid #93a7b3; /* stroke */
-		background-color: #557082; /* layer fill content */
+		border-bottom: 1px solid var(--hokie-orange); /* stroke */
+    background-color: var(--hokie-maroon); /* layer fill content */
 		color: #fff;
 }
 #stats li {
