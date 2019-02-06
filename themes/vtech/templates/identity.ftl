@@ -131,31 +131,10 @@
 
           <ul id="vt_main_nav" role="presentation" aria-label="Pages in Site">
 
-            <!-- Menu item with children example -->
-            <li class="nav-item has-submenu">
-              <div class="link-wrapper">
-                <a href="#" class="" tabindex="-1">Menu item with children</a>
-                <button tabindex="-1" class="fold-icon" onclick="javascript:foldAction(this);" aria-expanded="false" aria-label="About Submenu Toggle" aria-controls="about_submenu">
-                  <span class="far fa-times" focusable="false"></span>
-
-                  <!-- !!!!!!!!!!!! -->
-                  <!-- update "menu item" to be the name of the container link above -->
-                  <span class="sr-only">Menu item with children Submenu Toggle</span>
-                  <!-- update "menu item" to be the name of the container link above -->
-                  <!-- !!!!!!!!!!!! -->
-                </button>
-              </div>
-                  <ul class="submenu" id="about_submenu" aria-label="About Submenu">
-                      <li class="nav-item">
-                        <a href="#" tabindex="-1">Child menu item</a>
-                      </li>
-                  </ul>
-            </li>
-
             
-            <!-- Single menu item example -->
-            <li class="nav-item"><div class="link-wrapper"><a href="#" tabindex="-1">Single Menu Item</a></div></li> 
-
+            <#list menu.items as item>
+              <li class="nav-item"><div class="link-wrapper"><a href="{item.url}" tabindex="-1" title="${item.linkText} ${i18n().menu_item}">${item.linkText}</a></div></li> 
+            </#list>
           </ul>
 
           <ul class="vt-actions-nav" role="menu" aria-label="Actions">
