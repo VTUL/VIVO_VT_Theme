@@ -1126,11 +1126,13 @@ footer {
     color: #4e5051;
     background-color: #333;
     border-top: solid 5px var(--hokie-orange);
-    /*padding: 0 35px;*/
+    padding: inherit;
+    padding-top: 15px;
 }
 @media screen and (min-width: 768px) {
   footer {
-    /*padding: 0 35px;*/
+    padding: inherit;
+    padding-top: 15px;
   }
 }
 footer .content {
