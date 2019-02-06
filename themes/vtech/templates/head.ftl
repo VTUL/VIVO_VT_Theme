@@ -17,7 +17,7 @@
     </#if>	
 </#if>	
 
-<link type="text/css" rel="stylesheet" href="${urls.theme}/css/root.min.css"/>
+
 <#include "stylesheets.ftl">
 <link rel="stylesheet" href="${urls.theme}/css/screen.css" />
 
@@ -33,7 +33,7 @@
 <!-- bootstrap responsive tabs -->
 <script src="https://www.assets.cms.vt.edu/bootstrap/bootstrap-responsive-tabs/js/responsive-tabs.js"></script>
 
-
+<link type="text/css" rel="stylesheet" href="${urls.theme}/css/root.css"/>
 
 
 
