@@ -1,0 +1,74 @@
+{
+    "items": [
+    {
+        "el": "li",
+        "attrs": {"class": "vt-access-item"},
+        "content": {
+            "el": "a",
+            "attrs": {
+                "href": "#vt-main",
+                "onclick": "accessToggle()",
+                "class": "vt-access-item-link"
+            },
+            "items": [
+                {
+                    "content":{
+                        "el": "img",
+                        "attrs": {
+                            "src": "https://www.assets.cms.vt.edu/images/vt-accessibility_skip-content.svg",
+                            "alt": "",
+                            "class": "vt-access-item-linkImage vt-transparent-bg",
+                            "focusable": "false",
+                            "aria-hidden": "true"
+                        }
+                    }
+                },
+                {
+                    "content": {
+                        "el": "span",
+                        "attrs": {
+                            "class": "vt-access-item-linkText"
+                        },
+                        "text": "Skip to main content"
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "el": "li",
+        "attrs": {"class": "vt-access-item"},
+        "content": {
+            "el": "a",
+            "attrs": {
+                "href": "https://vt.edu/accessibility/barrier.html",
+                "onclick": "accessToggle()",
+                "class": "vt-access-item-link"
+            },
+            "items": [
+                {
+                    "content":{
+                        "el": "img",
+                        "attrs": {
+                            "src": "https://www.assets.cms.vt.edu/images/vt-accessibility_report-barrier.svg",
+                            "alt": "",
+                            "class": "vt-access-item-linkImage vt-transparent-bg",
+                            "focusable": "false",
+                            "aria-hidden": "true"
+                        }
+                    }
+                },
+                {
+                    "content": {
+                        "el": "span",
+                        "attrs": {
+                            "class": "vt-access-item-linkText"
+                        },
+                        "text": "Report a barrier"
+                    }
+                }
+            ]
+        }
+    }
+]
+}
