@@ -1134,7 +1134,6 @@ footer .content {
 footer p.copyright {
     float: left;
     color: #fff;
-    padding-top: 25px;
     padding-left: 30px;
     width: 600px;
 }
@@ -1144,6 +1143,7 @@ footer p.copyright small {
 footer p.copyright a{
     color: #fff;
     text-decoration: underline;
+    margin-bottom: 0;
 }
 footer p.copyright a:hover{
     color: #fff;
@@ -1158,7 +1158,7 @@ ul#footer-nav {
     height: 20px;
     margin: 0;
     padding: 0;
-    padding: 78px 20px 0 0;
+    padding: 0px 20px 0 0;
 }
 ul#footer-nav li {
     float: left;
