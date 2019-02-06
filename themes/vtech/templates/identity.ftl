@@ -133,7 +133,7 @@
 
             
             <#list menu.items as item>
-              <li class="nav-item"><div class="link-wrapper"><a href="{item.url}" tabindex="-1" title="${item.linkText} ${i18n().menu_item}">${item.linkText}</a></div></li> 
+              <li class="nav-item"><div class="link-wrapper"><a href="${item.url}" tabindex="-1" title="${item.linkText} ${i18n().menu_item}">${item.linkText}</a></div></li> 
             </#list>
           </ul>
 
