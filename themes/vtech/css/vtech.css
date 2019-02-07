@@ -862,9 +862,10 @@ input.search-home-vivo {
     color: #fff;
     font-size: 18px;
     border: none;
-    padding-top: 8px;
+    padding-top: 3px;
     cursor: pointer;
     height: 100%;
+    margin-top: 2px;
 }
 #intro a.filter-search {
   position: relative;
@@ -872,7 +873,8 @@ input.search-home-vivo {
   top: unset;
 	right: unset;
   color: white;
-  background-color: var(--hokie-maroon);
+  background-color: var(--hokie-orange);
+  background-image: none;
 }
 input.search-homepage {
     height: 100%;
