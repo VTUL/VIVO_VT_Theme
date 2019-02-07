@@ -852,7 +852,7 @@ input.search-home-vivo {
 /* SEARCH HOME------>  */ 
 
 #search-home-field {
-    width: 450px;
+    width: 440px;
     height: 40px;
     display: inline-block;
 }
@@ -875,6 +875,9 @@ input.search-home-vivo {
   color: white;
   background-color: var(--hokie-orange);
   background-image: none;
+  vertical-align: top;
+  height: 40px;
+  margin-top: 2px;
 }
 input.search-homepage {
     height: 100%;
