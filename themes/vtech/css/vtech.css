@@ -1138,6 +1138,17 @@ ul#stats .stats-count {
 }
 
 
+/* SITE ADMIN------>  */
+.siteAdmin .tab {
+  margin-top: 20px;
+}
+.siteAdmin .tab h2 {
+  color: var(--hokie-maroon);
+}
+.pageBodyGroup h3 {
+  color: var(--hokie-maroon);
+}
+
 #noContentMsg {
     clear: both;
 }
