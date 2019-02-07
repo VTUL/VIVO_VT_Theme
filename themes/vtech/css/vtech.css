@@ -852,18 +852,19 @@ input.search-home-vivo {
 /* SEARCH HOME------>  */ 
 
 #search-home-field {
-    width: 483px;
+    width: 450px;
     height: 40px;
+    display: inline-block;
 }
 #search-home-field input.search {
     text-decoration: none;
-    background-color: transparent;
+    background-color: var(--hokie-maroon);
     color: #fff;
     font-size: 18px;
     border: none;
-    padding-left: 23px;
     padding-top: 8px;
     cursor: pointer;
+    height: 100%;
 }
 a.filter-search {
 	right: 109px;
@@ -874,6 +875,8 @@ input.search-homepage {
 		background-color: #f9fafa;
 		background-position: right;
 		text-align:right; 
+    margin-right: 2px;
+    display:inline-block;
 }
 
 .filter-default {
