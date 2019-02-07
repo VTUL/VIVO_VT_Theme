@@ -607,6 +607,10 @@ input.search-vivo {
 #search-form-modifier {
     display: none;
 }
+
+.searchResultsHeader, span#searchHelp {
+  margin-top: 20px;
+}
 /* MAIN NAVIGATION------>  */
 nav#main-nav-wrapper {
   background-color: white;
