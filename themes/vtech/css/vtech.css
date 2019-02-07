@@ -853,7 +853,7 @@ input.search-home-vivo {
 
 #search-home-field {
     width: 483px;
-    height: 44px;
+    height: 40px;
 }
 #search-home-field input.search {
     text-decoration: none;
@@ -869,6 +869,7 @@ a.filter-search {
 	right: 109px;
 }
 input.search-homepage {
+    height: 100%;
 		border: 1px solid var(--hokie-maroon);
 		background-color: #f9fafa;
 		background-position: right;
