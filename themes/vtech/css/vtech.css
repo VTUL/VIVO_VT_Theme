@@ -886,6 +886,7 @@ input.search-home-vivo {
     text-align: center;
     margin-top: 8px;
     color: white;
+    text-decoration: none;
 }
 input.search-homepage {
     height: 100%;
@@ -893,7 +894,7 @@ input.search-homepage {
 		background-color: #f9fafa;
 		background-position: right;
 		text-align:right; 
-    margin-right: 2px;
+    margin-right: 4px;
     display:inline-block;
 }
 
@@ -1076,6 +1077,8 @@ div#research-faculty-mbrs ul li.individual:first-child {
     padding-top: 20px
 }
 div#research-faculty-mbrs li h1 {
+    font-family: Acherus, sans-serif;
+    font-size: .9em;
     padding: 6px 0 2px 0;
 }
 div#research-faculty-mbrs li img {
