@@ -27,9 +27,10 @@ body {
     min-height: 100%; /* real browsers */
     margin: 0 auto;
 }
+/*
 body {
    background: white url('../images/grid_3.png') repeat;
-}
+} */
 #mask {
    position: absolute;
    width: 100%;
@@ -932,7 +933,7 @@ input.search-homepage {
 }
 #filter-search-nav a {
 		border-bottom: 1px dotted #4f5656;
-		color: #1483A4;
+		color: var(--hokie-orange);
 }
 
 /* BROWSE ------>  */
