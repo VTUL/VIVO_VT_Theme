@@ -737,6 +737,8 @@ h3.internal-auth:hover {
     height: 40px;
     margin-top: 20px;
     margin-left: 38px;
+    float: none;
+    padding-left: 0;
 }
 #login-form p.submit-password {
     height: 40px;
