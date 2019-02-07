@@ -11,6 +11,8 @@ var i18nStrings = {
   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
   crossorigin="anonymous"></script>
 
+<script src="https://www.assets.cms.vt.edu/bootstrap/archives/4.0.0/dist/js/bootstrap.min.js"></script>
+
 <!-- bootstrap responsive tabs -->
 <script src="https://www.assets.cms.vt.edu/bootstrap/bootstrap-responsive-tabs/js/responsive-tabs.js"></script>
 

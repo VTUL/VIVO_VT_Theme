@@ -24,8 +24,6 @@
 
 <script src="https://www.assets.cms.vt.edu/js/popper/archives/1.12.9/popper.min.js"></script>
 
-<script src="https://www.assets.cms.vt.edu/bootstrap/archives/4.0.0/dist/js/bootstrap.min.js"></script>
-
 <link type="text/css" rel="stylesheet" href="//www.assets.cms.vt.edu/font-awesome/archives-pro/5.0.9/svg-with-js/css/fa-svg-with-js.css"/>
 
 <script src="//www.assets.cms.vt.edu/font-awesome/archives-pro/5.0.9/svg-with-js/js/fontawesome-all.min.js"></script>
