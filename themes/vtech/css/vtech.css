@@ -879,6 +879,14 @@ input.search-home-vivo {
   height: 40px;
   margin-top: 2px;
 }
+#search-homepage a .displace {
+    transform: rotate(90deg);
+    position: relative;
+    display: block;
+    text-align: center;
+    margin-top: 8px;
+    color: white;
+}
 input.search-homepage {
     height: 100%;
 		border: 1px solid var(--hokie-maroon);
@@ -1742,14 +1750,6 @@ article.property ul.property-list li a {
 /* MISCELLANEOUS ------>  */
 .grey {
     color: #5e6363;
-}
-.displace {
-    transform: rotate(90deg);
-    position: relative;
-    display: block;
-    text-align: center;
-    margin-top: 8px;
-    color: white;
 }
 a {
     text-decoration: underline
