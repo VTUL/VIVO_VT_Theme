@@ -1137,18 +1137,6 @@ ul#stats .stats-count {
   padding-top: 0;
 }
 
-
-/* SITE ADMIN------>  */
-.siteAdmin .tab {
-  margin-top: 20px;
-}
-.siteAdmin .tab h2 {
-  color: var(--hokie-maroon);
-}
-.pageBodyGroup h3 {
-  color: var(--hokie-maroon);
-}
-
 #noContentMsg {
     clear: both;
 }
@@ -1804,6 +1792,13 @@ p.address-line {
 /* ------------------------------------------------->  */
 /* SITE ADMIN DASHBOARD ---------------------------->  */
 /* ------------------------------------------------->  */
+.siteAdmin .tab {
+  margin-top: 20px;
+}
+.siteAdmin .tab h2 {
+  color: var(--hokie-maroon);
+}
+
 #adminDashboard .pageBodyGroup {
   padding: 0 1em .5em 1em;
 }
@@ -1812,7 +1807,7 @@ p.address-line {
   border-bottom: 1px dotted #AFB2B2;
   font-weight: bold;
   padding: .625em;
-  color: #064D68;
+  color: var(--hokie-maroon);
   margin-bottom: .625em;
 }
 #adminDashboard .pageBodyGroup ul {
