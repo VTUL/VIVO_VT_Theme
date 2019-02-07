@@ -30,9 +30,6 @@
 
 <script src="//www.assets.cms.vt.edu/font-awesome/archives-pro/5.0.9/svg-with-js/js/fontawesome-all.min.js"></script>
 
-<!-- bootstrap responsive tabs -->
-<script src="https://www.assets.cms.vt.edu/bootstrap/bootstrap-responsive-tabs/js/responsive-tabs.js"></script>
-
 <link type="text/css" rel="stylesheet" href="${urls.theme}/css/root.css"/>
 
 

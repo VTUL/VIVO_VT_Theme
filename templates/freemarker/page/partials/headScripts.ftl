@@ -10,6 +10,10 @@ var i18nStrings = {
   src="https://code.jquery.com/jquery-3.3.1.js"
   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
   crossorigin="anonymous"></script>
+
+<!-- bootstrap responsive tabs -->
+<script src="https://www.assets.cms.vt.edu/bootstrap/bootstrap-responsive-tabs/js/responsive-tabs.js"></script>
+
 <script type="text/javascript" src="${urls.base}/js/vitroUtils.js"></script>
 
 <#-- script for enabling new HTML5 semantic markup in IE browsers -->
