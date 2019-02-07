@@ -1744,8 +1744,12 @@ article.property ul.property-list li a {
     color: #5e6363;
 }
 .displace {
-    position: absolute;
-    left: -9999px;
+    transform: rotate(90deg);
+    position: relative;
+    display: block;
+    text-align: center;
+    margin-top: 8px;
+    color: white;
 }
 a {
     text-decoration: underline
