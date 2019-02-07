@@ -547,6 +547,10 @@ ul#header-nav li:last-child {
 ul.dropdown li#user-menu {
     background: url(../images/arrowDownOverAccount.gif) right 2px no-repeat;
 }
+ul.dropdown li#user-menu.hover, ul.dropdown li#user-menu:hover, ul.language-dropdown li#language-menu.hover, ul.language-dropdown li#language-menu:hover {
+  background: #fff url(../images/arrowDownAccount.gif) right 2px no-repeat;
+}
+
 ul#header-nav a {
     color: white;
 }
