@@ -866,8 +866,13 @@ input.search-home-vivo {
     cursor: pointer;
     height: 100%;
 }
-a.filter-search {
-	right: 109px;
+#intro a.filter-search {
+  position: relative;
+  display: inline-block;
+  top: unset;
+	right: unset;
+  color: white;
+  background-color: var(--hokie-maroon);
 }
 input.search-homepage {
     height: 100%;
