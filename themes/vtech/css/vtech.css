@@ -1078,7 +1078,7 @@ div#research-faculty-mbrs ul li.individual:first-child {
 }
 div#research-faculty-mbrs li h1 {
     font-family: Acherus, sans-serif;
-    font-size: .9em;
+    font-size: 1em;
     padding: 6px 0 2px 0;
 }
 div#research-faculty-mbrs li img {
@@ -1121,6 +1121,11 @@ div#adjImgHeight {
     text-align:center;
     margin-top:100px;
 }
+ul#stats .stats-count {
+  padding-top: 0;
+}
+
+
 #noContentMsg {
     clear: both;
 }
