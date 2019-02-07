@@ -891,7 +891,7 @@ input.search-home-vivo {
   height: 40px;
   margin-top: 2px;
 }
-#search-homepage a .displace {
+#search-homepage a .displace, #search-homepage a .displace:hover {
     transform: rotate(90deg);
     position: relative;
     display: block;
@@ -917,9 +917,10 @@ input.search-homepage {
 		background: url(../images/filteredSearchActive.gif) 0 0 no-repeat;
 }
 #filter-search-nav {
-		background-color: #660000;
+		background-color: var(--hokie-maroon);
 		color: #fff;
-		right: 109px;
+		right: 26px;
+    top: 43px;
 }
 #filter-search-nav li {
 		background-image: none;
