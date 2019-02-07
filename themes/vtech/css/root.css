@@ -12664,6 +12664,7 @@ figure {
 .vt-actions-header .vt-resources-toggle .vt-resources-toggle-text {
   display: block;
   position: relative;
+  color: white;
 }
 
 .vt-actions-header .vt-resources-toggle .fa-chevron-down {
