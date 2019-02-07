@@ -544,6 +544,9 @@ ul#header-nav li:last-child {
     padding-right: 0;
     border-right: none;
 }
+ul.dropdown li#user-menu {
+    background: url(../images/arrowDownOverAccount.gif) right 2px no-repeat;
+}
 ul#header-nav a {
     color: white;
 }
@@ -557,6 +560,9 @@ ul#header-nav a:active {
 }
 ul#header-nav a.log-out {
     padding-left: 10px;
+}
+ul.dropdown ul.sub_menu {
+  margin-top: 5px;
 }
 /* SEARCH ------>  */
 #search {
