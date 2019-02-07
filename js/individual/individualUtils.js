@@ -13,7 +13,9 @@ $(document).ready(function(){
     $.extend(this, i18nStrings);
 
     // "more"/"less" HTML truncator for showing more or less content in data property core:overview
-    $('.overview-value').trim(title).substring(0, 500).split(" ").slice(0, -1).join(" ") + "...";
+    $('.overview-value').text(
+      $.trim($('.overview-value').text()).substring(0, 500).split(" ").slice(0, -1).join(" ") + "..."
+    );
         
     // Change background color button when verbose mode is off
     $('a#verbosePropertySwitch:contains("' + i18nStrings.verboseTurnOff + '")').addClass('verbose-off');
