@@ -545,10 +545,10 @@ ul#header-nav li:last-child {
     border-right: none;
 }
 ul.dropdown li#user-menu {
-    background: url(../images/arrowDownOverAccount.gif) right 2px no-repeat;
+    background: url(../images/arrow-down-over-account.gif) right 2px no-repeat;
 }
 ul.dropdown li#user-menu.hover, ul.dropdown li#user-menu:hover, ul.language-dropdown li#language-menu.hover, ul.language-dropdown li#language-menu:hover {
-  background: #fff url(../images/arrowDownAccount.gif) right 2px no-repeat;
+  background: #fff url(../images/arrow-down-account.gif) right 2px no-repeat;
 }
 
 ul#header-nav a {
