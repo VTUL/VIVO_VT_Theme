@@ -42,7 +42,6 @@
                 <h3>${i18n().intro_searchvivo} <span class="search-filter-selected">filteredSearch</span></h3>
         
                 <fieldset>
-                    <legend>${i18n().search_form}</legend>
                     <form id="search-homepage" action="${urls.search}" name="search-home" role="search" method="post" > 
                         <div id="search-home-field">
                             <input type="text" name="querytext" class="search-homepage" value="" autocapitalize="off" />
