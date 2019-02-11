@@ -30,6 +30,15 @@ $ cp VIVO_VT_Theme/rdf/display/everytime/*.n3 /usr/local/vivo/vdata/rdf/display/
 $ chown -R vagrant:tomcat7 /usr/local/vivo/vdata/rdf/display/everytime/*.n3
 $ cp VIVO_VT_Theme/config/listViewConfig-authorInAuthorship.xml config/.
 $ chown -R vagrant:tomcat7 config/listViewConfig-authorInAuthorship.xml
+$ cp VIVO_VT_Theme/js/individual/individualUtils.js js/individual/
+$ chown -R vagrant:tomcat7 js/individual/*.js
+$ cp VIVO_VT_Theme/templates/freemarker/page/partials/developer.ftl templates/freemarker/page/partials/
+$ cp VIVO_VT_Theme/templates/freemarker/page/partials/headScripts.ftl templates/freemarker/page/partials/
+$ cp VIVO_VT_Theme/templates/freemarker/page/partials/scripts.ftl templates/freemarker/page/partials/
+$ chown -R vagrant:tomcat7 templates/freemarker/page/partials/*.ftl
+$ cp VIVO_VT_Theme/themes/wilma/templates/individual--foaf-person.ftl themes/wilma/templates/
+$ chown -R vagrant:tomcat7 themes/wilma/templates/*.ftl
+
 $ sudo /etc/init.d/tomcat7 start
 ```
 * Step4: Apply VTech theme

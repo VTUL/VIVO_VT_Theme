@@ -17,8 +17,21 @@
     </#if>	
 </#if>	
 
+
 <#include "stylesheets.ftl">
 <link rel="stylesheet" href="${urls.theme}/css/screen.css" />
+
+
+<script src="https://www.assets.cms.vt.edu/js/popper/archives/1.12.9/popper.min.js"></script>
+
+<link type="text/css" rel="stylesheet" href="//www.assets.cms.vt.edu/font-awesome/archives-pro/5.0.9/svg-with-js/css/fa-svg-with-js.css"/>
+
+<script src="//www.assets.cms.vt.edu/font-awesome/archives-pro/5.0.9/svg-with-js/js/fontawesome-all.min.js"></script>
+
+<link type="text/css" rel="stylesheet" href="${urls.theme}/css/root.css"/>
+
+
+
 
 <#include "headScripts.ftl">
 

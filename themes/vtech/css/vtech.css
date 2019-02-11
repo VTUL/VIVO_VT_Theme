@@ -3,6 +3,9 @@
 @charset "UTF-8";
 /* CSS Document */
 
+@import "fonts.css";
+@import "colors.css";
+
 /* Tell the browser to render HTML 5 elements as block */
 header,
 hgroup,
@@ -21,13 +24,20 @@ body {
     padding: 0;
     height: 100%; /* needed for container min-height */
     font-family: "Lucida Sans Unicode","Lucida Grande", Geneva, helvetica, sans-serif; 
-    height: auto !important; /* real browsers */
-    height: 100%; /* IE6: treaded as min-height*/;
     min-height: 100%; /* real browsers */
     margin: 0 auto;
 }
+/*
 body {
-   background: #f3f3f0 url(../images/header-background.png) center 0 no-repeat;
+   background: white url('../images/grid_3.png') repeat;
+} */
+#mask {
+   position: absolute;
+   width: 100%;
+   height: calc(100% - 211px);
+   top: 211px;
+   background-color: rgba(0,0,0,.1);
+   z-index: -1;
 }
 a:hover {
     text-decoration: none;
@@ -43,7 +53,7 @@ h2 {
     padding: 10px 0 12px 0;
     margin: 0;
     font-size: 1.375em;
-    color: #064d68;
+    color: var(--hokie-maroon);
     line-height: 1.5em;
 }
 h2 a {
@@ -127,7 +137,7 @@ input.form-button:visited {
     position: relative;
     border: 0;
     margin: 0;
-    background-color: #ff6600;
+    background-color: var(--hokie-orange);
     font-size: 14px;
     font-weight: normal;
     line-height: 1;
@@ -467,28 +477,49 @@ tr.editformcell td select {
     width: 970px;
     height: 114px;
     margin: 0 auto;
+    background-color: white;
 }
 /* BRANDING ------>  */
 ul.dropdown ul.sub_menu li{
     background: url("../images/arrow-menu-account.gif") no-repeat scroll 7px 8px #fff;
 }
-
-h1.vivo-logo {
+h1.vivo-logo-wrapper {
     position: absolute;
-    width: 500px;
-    height: 59px;
+    width: 400px;
+    height: 50px;
     top: 28px;
     left: 0;
-    background: url(../images/header-logo.png) 0 0 no-repeat;
 }
-h1.vivo-logo a {
-    display: block;
-    width: 500px;
-    height: 59px;
+h1 .vivo-logo {
+    display: inline-block;
+    width: 275px;
+    height: 100%;
+    background: url(../images/header-logo.svg) 0 0 no-repeat;
+    border-right: 1px solid rgba(232,119,34,1);
+}
+h1 .home-name {
+    display: inline-block;
+    height: 100%;
+    vertical-align: top;
+    font-family: Acherus,sans-serif;
+    font-size: 20px; 
+}
+h1 .home-name a {
+   color: var(--hokie-maroon);
+   text-decoration: none;
+   height: calc(100% - 24px);
+   margin: 12px 15px;
+}
+h1 .vivo-logo a, h1 .home-name a {
+    display: inline-block;
+    width: 100%;
+}
+h1 .vivo-logo a, h1 .vivo-logo a:visited, h1 .vivo-logo a:active, h1 .vivo-logo a:link {
+    height: 100%;
+    color: transparent;
 }
 /* HEADER NAV------>  */
 ul#header-nav {
-    float: right;
     list-style: none;
     height: 30px;
     padding-top: 10px;
@@ -500,19 +531,29 @@ ul#header-nav li {
     padding-left: 10px;
     padding-right: 10px;
     border-right: 1px solid #7c7d7f;
-    font-size: .7em;
+    font-family: Acherus,sans-serif;
+    font-size: .8em;
+    font-weight: 300;
+    line-height: 1;
+    text-transform: uppercase;
     color: #fff;
 }
 ul#header-nav li.last {
     border-right: none;
 }
 ul#header-nav li:last-child {
-    padding-left: 1px;
     padding-right: 0;
     border-right: none;
 }
+ul.dropdown li#user-menu {
+    background: url(../images/arrow-down-over-account.gif) right 2px no-repeat;
+}
+ul.dropdown li#user-menu.hover, ul.dropdown li#user-menu:hover, ul.language-dropdown li#language-menu.hover, ul.language-dropdown li#language-menu:hover {
+  background: #fff url(../images/arrow-down-account.gif) right 2px no-repeat;
+}
+
 ul#header-nav a {
-    color: #fff;
+    color: white;
 }
 ul#header-nav a:link,
 ul#header-nav a:visited {
@@ -525,14 +566,17 @@ ul#header-nav a:active {
 ul#header-nav a.log-out {
     padding-left: 10px;
 }
+ul.dropdown ul.sub_menu {
+  margin-top: 5px;
+}
 /* SEARCH ------>  */
 #search {
-    position: absolute;
+    position: relative;
     width: 396px;
     height: 38px;
-    top: 40px;
-    right: 10px;
     padding-top: 5px;
+    float: right;
+    margin-right: 20px;
 }
 #search-field {
     width: 396px;
@@ -563,16 +607,20 @@ input.search-vivo {
 #search-form-modifier {
     display: none;
 }
+
+.searchResultsHeader, span#searchHelp {
+  margin-top: 20px;
+}
 /* MAIN NAVIGATION------>  */
+nav#main-nav-wrapper {
+  background-color: white;
+}
 ul#main-nav {
-    -webkit-box-shadow: inset 0 5px 5px -5px rgba(0,0,0,0.8);
-    -moz-box-shadow: inset 0 5px 5px -5px rgba(0,0,0,0.8);
-    box-shadow: inset 0 5px 5px -5px rgba(0,0,0,0.8);
     display: block;
     width: 970px;
     height: 46px;
     border: none;
-    background-color: #f7f9f9;
+    border-bottom: 1px solid black;
     margin: 0 auto;
     list-style: none;
     font-size: 1em;
@@ -601,8 +649,8 @@ ul#main-nav {
 /* WRAPPER CONTENT------>  */
 #wrapper-content {
     clear: both;
-    width: 950px;
-    margin: 0 auto;
+    width: 980px;
+    margin: 50px auto 0 auto;
     background: #fff;
     min-height: 710px;
     padding: 20px;
@@ -613,13 +661,10 @@ ul#main-nav {
     width: 520px;
     padding-bottom: 50px;
 }
-body.loggedIn #intro {
-    width: 98%;
-}
 #intro h2 {
     padding: 35px 0 12px 24px;
     border-bottom: none;
-    color: #2485AE;
+    color: var(--hokie-maroon);
 }
 #intro p {
     font-size: 16px;
@@ -635,22 +680,15 @@ body.loggedIn #intro {
     float: right;
     width: 420px;
     border: 1px solid #e8ece9;
-/*    margin-right: 25px;
- *        padding-bottom: 30px;
- *            margin-bottom: 30px;
- *                overflow: hidden;
- *                    margin-top: 20px;*/
+    margin-top: 20px;
 }
 body.login #login {
     float: none;
 }
 #login h2 {
-/*    font-size: 22px;
- *        padding-left: 15px;
- *            padding-top: 18px;
- *            */    padding: 35px 0 10px 10px;
+    padding: 35px 0 10px 10px;
     border-bottom: none;
-    color: #2485AE;
+    color: var(--hokie-maroon);
 }
 #login p {
     font-size: 16px;
@@ -714,6 +752,8 @@ h3.internal-auth:hover {
     height: 40px;
     margin-top: 20px;
     margin-left: 38px;
+    float: none;
+    padding-left: 0;
 }
 #login-form p.submit-password {
     height: 40px;
@@ -810,24 +850,10 @@ p.external-auth a.blue:hover {
     padding: 0;
     font-size: 22px;
     margin-bottom: 15px;
-    color: #2485AE;
+    color: var(--hokie-maroon);
 		padding-left: 24px;
 }
-#search-home-field {
-    width: 483px;
-    height: 44px;
-    background: url(../images/search-field-and-button.gif) 0 0 no-repeat;
-}
-#search-home-field input.search {
-    text-decoration: none;
-    background-color: transparent;
-    color: #fff;
-    font-size: 18px;
-    border: none;
-    padding-left: 23px;
-    padding-top: 8px;
-    cursor: pointer;
-}
+
 input.search-home-vivo {
     float: left;
     margin: 10px 0 0 8px;
@@ -843,23 +869,50 @@ input.search-home-vivo {
 /* SEARCH HOME------>  */ 
 
 #search-home-field {
-		background: url(../images/search-field-and-button.gif) 0 0 no-repeat;
-		width: 520px;
+    width: 440px;
+    height: 40px;
+    display: inline-block;
 }
 #search-home-field input.search {
-	 	background-color: transparent;
-	 	color: #fff;
-		border: none;
+    text-decoration: none;
+    background-color: var(--hokie-maroon);
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    padding-top: 3px;
+    cursor: pointer;
+    height: 100%;
+    margin-top: 2px;
 }
-a.filter-search {
-	right: 109px;
+#intro a.filter-search {
+  position: relative;
+  display: inline-block;
+  top: unset;
+	right: unset;
+  color: white;
+  background-color: var(--hokie-orange);
+  background-image: none;
+  vertical-align: top;
+  height: 40px;
+  margin-top: 2px;
+}
+#search-homepage a .displace, #search-homepage a .displace:hover {
+    transform: rotate(90deg);
+    position: relative;
+    display: block;
+    text-align: center;
+    margin-top: 8px;
+    color: white;
+    text-decoration: none;
 }
 input.search-homepage {
-		border: 0;
+    height: 100%;
+		border: 1px solid var(--hokie-maroon);
 		background-color: #f9fafa;
 		background-position: right;
-		opacity: .5;
 		text-align:right; 
+    margin-right: 4px;
+    display:inline-block;
 }
 
 .filter-default {
@@ -869,9 +922,10 @@ input.search-homepage {
 		background: url(../images/filteredSearchActive.gif) 0 0 no-repeat;
 }
 #filter-search-nav {
-		background-color: #660000;
+		background-color: var(--hokie-maroon);
 		color: #fff;
-		right: 109px;
+		right: 26px;
+    top: 43px;
 }
 #filter-search-nav li {
 		background-image: none;
@@ -883,7 +937,7 @@ input.search-homepage {
 }
 #filter-search-nav a {
 		border-bottom: 1px dotted #4f5656;
-		color: #1483A4;
+		color: var(--hokie-orange);
 }
 
 /* BROWSE ------>  */
@@ -932,8 +986,8 @@ a.view-all-style {
 }
 .home-sections h4 {
 		border-top: 1px solid rgba(220,228,227,.42); /* stroke */
-		border-bottom: 2px solid #93a7b3; /* stroke */
-		background-color: #557082; /* layer fill content */
+		border-bottom: 1px solid var(--hokie-orange); /* stroke */
+		background-color: var(--hokie-maroon); /* layer fill content */
 		color: #fff;
 }
 #home-stats {
@@ -941,8 +995,8 @@ a.view-all-style {
 }
 #home-stats h4 {
 		border-top: 1px solid rgba(220,228,227,.42); /* stroke */
-		border-bottom: 2px solid #93a7b3; /* stroke */
-		background-color: #557082; /* layer fill content */
+		border-bottom: 1px solid var(--hokie-orange); /* stroke */
+    background-color: var(--hokie-maroon); /* layer fill content */
 		color: #fff;
 }
 #stats li {
@@ -1041,6 +1095,8 @@ div#research-faculty-mbrs ul li.individual:first-child {
     padding-top: 20px
 }
 div#research-faculty-mbrs li h1 {
+    font-family: Acherus, sans-serif;
+    font-size: 1em;
     padding: 6px 0 2px 0;
 }
 div#research-faculty-mbrs li img {
@@ -1083,6 +1139,10 @@ div#adjImgHeight {
     text-align:center;
     margin-top:100px;
 }
+ul#stats .stats-count {
+  padding-top: 0;
+}
+
 #noContentMsg {
     clear: both;
 }
@@ -1095,7 +1155,15 @@ footer {
     font-size: .7em;
     color: #4e5051;
     background-color: #333;
-    border-top: solid 5px #ff6600;
+    border-top: solid 5px var(--hokie-orange);
+    padding: inherit;
+    padding-top: 15px;
+}
+@media screen and (min-width: 768px) {
+  footer {
+    padding: inherit;
+    padding-top: 15px;
+  }
 }
 footer .content {
     margin: 0 auto;
@@ -1104,7 +1172,6 @@ footer .content {
 footer p.copyright {
     float: left;
     color: #fff;
-    padding-top: 25px;
     padding-left: 30px;
     width: 600px;
 }
@@ -1114,6 +1181,7 @@ footer p.copyright small {
 footer p.copyright a{
     color: #fff;
     text-decoration: underline;
+    margin-bottom: 0;
 }
 footer p.copyright a:hover{
     color: #fff;
@@ -1128,7 +1196,7 @@ ul#footer-nav {
     height: 20px;
     margin: 0;
     padding: 0;
-    padding: 78px 20px 0 0;
+    padding: 0px 20px 0 0;
 }
 ul#footer-nav li {
     float: left;
@@ -1190,6 +1258,16 @@ p{
     font-weight: normal;
     line-height: 1; 
 }
+
+.orange.button,
+.orange.button:visited {
+    background-color: var(--hokie-orange);
+    color: #fff;
+}
+.orange.button:hover {
+    background-color: var(--hokie-orange);
+}
+
 .green.button,
 .green.button:visited {
     background-color: #ff6600;
@@ -1242,7 +1320,6 @@ p{
 }
 #menupage-intro h2 {
     font-size: 1.375em;
-    color: #064d68;
     font-weight: normal;
 }
 #menupage-intro.people h2 {
@@ -1699,10 +1776,6 @@ article.property ul.property-list li a {
 .grey {
     color: #5e6363;
 }
-.displace {
-    position: absolute;
-    left: -9999px;
-}
 a {
     text-decoration: underline
 }
@@ -1725,6 +1798,13 @@ p.address-line {
 /* ------------------------------------------------->  */
 /* SITE ADMIN DASHBOARD ---------------------------->  */
 /* ------------------------------------------------->  */
+.siteAdmin .tab {
+  margin-top: 20px;
+}
+.siteAdmin .tab h2 {
+  color: var(--hokie-maroon);
+}
+
 #adminDashboard .pageBodyGroup {
   padding: 0 1em .5em 1em;
 }
@@ -1733,7 +1813,7 @@ p.address-line {
   border-bottom: 1px dotted #AFB2B2;
   font-weight: bold;
   padding: .625em;
-  color: #064D68;
+  color: var(--hokie-maroon);
   margin-bottom: .625em;
 }
 #adminDashboard .pageBodyGroup ul {
