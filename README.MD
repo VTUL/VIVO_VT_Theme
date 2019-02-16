@@ -19,26 +19,17 @@ $ rm -rf *
 $ cd ..
 $ tar -zxvf VIVO_VT_Theme.tar.gz
 $ mv VIVO_VT_Theme/themes/* themes/.
-$ chown -R vagrant:tomcat7 themes/* 
-$ cp VIVO_VT_Theme/templates/freemarker/body/partials/individual/* templates/freemarker/body/partials/individual/.
-$ chown -R vagrant:tomcat7 templates/freemarker/body/partials/individual/*
-$ cp VIVO_VT_Theme/templates/freemarker/lib/* templates/freemarker/lib/.
-$ chown -R vagrant:tomcat7 templates/freemarker/lib/*
+$ cp VIVO_VT_Theme/config/listViewConfig-authorInAuthorship.xml config/.
 $ cp VIVO_VT_Theme/css/individual/* css/individual/.
-$ chown -R vagrant:tomcat7 css/individual/*
+$ cp VIVO_VT_Theme/css/visualization/capabilitymap/* css/visualization/capabilitymap/.
+$ cp -r VIVO_VT_Theme/js/* js/.
+$ cp VIVO_VT_Theme/src/widget/html/GoogleMap.js src/widget/html/.
+$ cp -r VIVO_VT_Theme/templates/freemarker/* templates/freemarker/.
+$ cp VIVO_VT_Theme/themes/wilma/templates/individual--foaf-person.ftl themes/wilma/templates/.
+$ cd ..
+$ chown -R vagrant:tomcat7 vivo/
 $ cp VIVO_VT_Theme/rdf/display/everytime/*.n3 /usr/local/vivo/vdata/rdf/display/everytime/.
 $ chown -R vagrant:tomcat7 /usr/local/vivo/vdata/rdf/display/everytime/*.n3
-$ cp VIVO_VT_Theme/config/listViewConfig-authorInAuthorship.xml config/.
-$ chown -R vagrant:tomcat7 config/listViewConfig-authorInAuthorship.xml
-$ cp VIVO_VT_Theme/js/individual/individualUtils.js js/individual/
-$ chown -R vagrant:tomcat7 js/individual/*.js
-$ cp VIVO_VT_Theme/templates/freemarker/page/partials/developer.ftl templates/freemarker/page/partials/
-$ cp VIVO_VT_Theme/templates/freemarker/page/partials/headScripts.ftl templates/freemarker/page/partials/
-$ cp VIVO_VT_Theme/templates/freemarker/page/partials/scripts.ftl templates/freemarker/page/partials/
-$ chown -R vagrant:tomcat7 templates/freemarker/page/partials/*.ftl
-$ cp VIVO_VT_Theme/themes/wilma/templates/individual--foaf-person.ftl themes/wilma/templates/
-$ chown -R vagrant:tomcat7 themes/wilma/templates/*.ftl
-
 $ sudo /etc/init.d/tomcat7 start
 ```
 * Step4: Apply VTech theme

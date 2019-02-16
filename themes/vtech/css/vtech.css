@@ -522,7 +522,7 @@ h1 .vivo-logo a, h1 .vivo-logo a:visited, h1 .vivo-logo a:active, h1 .vivo-logo 
 ul#header-nav {
     list-style: none;
     height: 30px;
-    padding-top: 10px;
+    padding-top: 5px;
     margin-right: 13px;
 }
 ul#header-nav li {
@@ -1089,6 +1089,7 @@ div#research-faculty-mbrs {
 }
 div#research-faculty-mbrs li.individual {
     clear: both;
+    padding-top: 10px;
 }
 div#research-faculty-mbrs ul li.individual:first-child {
     clear: both;
@@ -1097,18 +1098,26 @@ div#research-faculty-mbrs ul li.individual:first-child {
 div#research-faculty-mbrs li h1 {
     font-family: Acherus, sans-serif;
     font-size: 1em;
-    padding: 6px 0 2px 0;
+    padding: 0px 0 2px 0;
+    margin-bottom: 0px;
 }
 div#research-faculty-mbrs li img {
+    position: relative;
+    display: inline-block;
     width: 60px;  
-    float: left;
-    padding: 0px 8px 10px 10px; 
+    padding: 0px 8px 10px 10px;
+    vertical-align: top;
+}
+div#research-faculty-mbrs li span.individual-info {
+    position: relative;
+    display: inline-block;
+    width: calc(100% - 65px);
 }
 div#research-faculty-mbrs li span.title {
     display: block;
     font-size: 0.825em;
     line-height: 1.25em;
-    padding-bottom: 8px;
+    padding-bottom: 0px;
 }
 div#research-faculty-mbrs ul#viewMoreFac  {
     list-style:none;
@@ -1152,40 +1161,40 @@ footer {
     min-width: 970px;
     min-height: 120px;
     margin: 0 auto;
-    font-size: .7em;
+    font-size: 1em;
     color: #4e5051;
     background-color: #333;
-    border-top: solid 5px var(--hokie-orange);
+    border-top: solid 2px var(--hokie-orange);
     padding: inherit;
-    padding-top: 15px;
+    padding: 15px 40px;
 }
 @media screen and (min-width: 768px) {
   footer {
     padding: inherit;
-    padding-top: 15px;
+    padding: 15px 40px;
   }
 }
 footer .content {
     margin: 0 auto;
     width: 970px;
 }
-footer p.copyright {
-    float: left;
+footer div.terms-of-use {
+    width: 100%;
+    text-align: center;
     color: #fff;
-    padding-left: 30px;
-    width: 600px;
-}
-footer p.copyright small {
     font-size: 1em;
 }
-footer p.copyright a{
+footer div.terms-of-use small {
+    font-size: .8em;
+}
+footer div.terms-of-use a{
     color: #fff;
     text-decoration: underline;
     margin-bottom: 0;
 }
-footer p.copyright a:hover{
+footer div.terms-of-use a:hover{
     color: #fff;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 ul#footer-nav {
