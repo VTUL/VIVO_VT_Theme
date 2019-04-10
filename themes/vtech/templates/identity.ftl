@@ -43,7 +43,8 @@
 <#--
                 <li role="listitem"><a class="log-out" title="${i18n().menu_loginfull}" href="${urls.login}">${i18n().menu_login}</a></li>
 -->
-                <li role="listitem"><a href="http://guides.lib.vt.edu/CollabVT/managemydata" title="Help" > Manage my data</a></li>
+                <li role="listitem"><a href="http://guides.lib.vt.edu/CollabVT/managemydata" title="Manage data" > Manage my data</a></li>
+                <li role="listitem"><a href="mailto:researchservices@vt.edu" title="Get help" > Need Help?</a></li>
             </#if>
         </ul>
     </nav>
