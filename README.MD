@@ -1,3 +1,7 @@
+# VIVO Virginia Tech Theme
+
+Theme Virginia Tech's VIVO profile system, CollabVT, to conform to University branding guidelines
+
 # Setup local VIVO instance with VTech theme.
 * Step1: start up vagrant
 ```
